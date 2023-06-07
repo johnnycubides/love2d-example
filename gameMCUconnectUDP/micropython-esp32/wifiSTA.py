@@ -1,6 +1,7 @@
+import network
+sta_if = network.WLAN(network.STA_IF)
+
 def connectSTA(ssid, pwd):
-    import network
-    sta_if = network.WLAN(network.STA_IF)
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
